@@ -1,7 +1,6 @@
 package com.shohan.cleanspace.ui.components
 
 import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
@@ -33,7 +32,7 @@ fun EmptyState(
     modifier: Modifier = Modifier
 ) {
     val infiniteTransition = rememberInfiniteTransition()
-    val pulse by infiniteTransition.animateFloatAsState(
+    val pulse by infiniteTransition.animateFloat(
         initialValue = 0.95f,
         targetValue = 1.05f,
         animationSpec = infiniteRepeatable(
